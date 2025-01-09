@@ -1,38 +1,580 @@
-.App {
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ADD8E6;
+  z-index: var(--z-fixed);
+ }
+ 
+ .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: var(--header-height);
+  margin: 1rem;
+ }
+
+ .container {
+  float: right;
+ }
+  
+ .nav__toggle,
+ .nav__close {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+ }
+ 
+ .nav__cta {
+  background-color: var(--first-color);
+  color: var(--title-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0.75rem 1.5rem;
+ }
+ .nav__list {
+  display: flex;
+  flex-direction: row;
+  row-gap: 2.5rem;
+ }
+ 
+ .nav__link {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+  font-family: monospace;
+  /* color: var(--title-color); */
+  /* font-weight: var(--font-semi-bold); */
+  
+  transition: color 0.3s;
+  font-size: 1rem;
+
+ }
+ 
+ .nav__link:hover {
+  color: var(--first-color);
+ }
+ 
+ .nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+ }
+ 
+ .show-menu {
+  right: 0;
+ }
+
+.main-content {
+  background-color: hsla(36, 31%, 90%, 1);
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center elements horizontally */
+  align-items: center; /* Center elements vertically */
+  /* height: calc(100vh - 60px); Adjust height based on navbar height */
+  text-align: center;
+  /* padding: 20px; */
+  margin-top: 80px;
+}
+
+.animation{
+  animation: backgroundColorTransition 8s infinite ease-in-out;
+
+}
+
+.centered-text {
+  font-family: 'Futura';
+  text-align: center;
+  /* margin-bottom: 20px; Adds spacing below the first section */
+  font-weight: 200;
+  /* margin-top: 80px; */
+
+}
+
+.centered-text h1 {
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+.centered-text p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Animation: make the card "dance" on hover */
+.card:hover {
+  transform: translateY(-10px) rotate(5deg);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  animation: dance 0.5s ease infinite alternate;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; Four equal rows */
+  height: 120vh; /* Full viewport height */
+   width: 100vw; /*Full width of the viewport */
+
+}
+.color-project{
+  background-color: #f4f4f4;
+  padding-top: 40px; /* Adds space above the content */
+  /* padding-bottom: 40px; */
+
+}
+
+.grid-container-intro{
+  /* display: grid; */
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; Four equal rows */
+  /* height: 100vh; Full viewport height */
+   /* width: 100vw;  */
+  display: flex;
+  justify-content: center;
+  background-color: rgb(250, 248, 244);
+     /* justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px; */
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+    gap: 10px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+}
+
+/* Styling for Sections */
+.section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+
+@keyframes dance {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 20px; /* Adds spacing between the cards */
+}
+
+.card {
+  font-family: fantasy;
+  width: 300px;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+}
+
+.card-color1 {
+  background-color: #e0d4f7; /* Light lavender */
+}
+
+.card-color2 {
+  background-color: #AEE5E0;
+}
+
+.card-color3 {
+  background-color: hsla(284, 50%, 80%, 0.7);
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.card-label {
+  font-size: 14px;
+  color: #7f7f7f; /* Light gray */
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-content {
+  margin-bottom: 20px;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.preview-button {
+  padding: 10px 20px;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Wrapper div to handle positioning */
+.wrapper {
+  position: relative;
+  height: 10vh; /* Full viewport height */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Centering the button with absolute positioning and transform */
+.custom-button {
+  background-color: #45B87B; /* Green color */
+  color: black;              /* Text color */
+  padding: 20px;
+  width: 90%;                /*Button takes up 80% of the page width */
+  border: none;
+  border-radius: 15px;       /* Rounded corners */
+  font-size: 24px;           /* Larger font */
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;                  /* Move button to the vertical center */
+  left: 50%;                 /* Move button to the horizontal center */
+  transform: translate(-50%, -50%); /* Center it by offsetting by 50% */
+}
+
+.custom-button:hover {
+  background-color: #38a069; /* Darker green on hover */
+}
+
+@keyframes backgroundColorTransition {
+  0% {
+    background-color: #ffd898; /* Orange */
+  }
+  10% {
+    background-color: hsla(12, 82%, 94%, 0.9); /* Light Rose Quartz */
+  }
+  20% {
+    background-color: hsla(206, 50%, 88%, 0.8); /* Light Blue */
+  }
+  30% {
+    background-color: #f9eac2; /* Yellow */
+  }
+  40% {
+    background-color: hsla(150, 65%, 85%, 0.7); /* Light Mint */
+  }
+  50% {
+    background-color: #fee7e6; /* Rose Quartz */
+  }
+  60% {
+    background-color: hsla(35, 80%, 75%, 0.8); /* Light Orange */
+  }
+  70% {
+    background-color: hsla(172, 60%, 88%, 0.7); /* Light Aqua */
+  }
+  80% {
+    background-color: #ecfdf1; /* Mint */
+  }
+  90% {
+    background-color: hsla(50, 75%, 85%, 0.8); /* Light Yellow */
+  }
+  100% {
+    background-color: #ffd898; /* Orange */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+}
+
+.employment {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.employment:before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #6c5ce7;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.company {
+  font-weight: bold;
+  color: #6c5ce7;
+}
+
+.location {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.dates {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.role {
+  font-weight: bold;
+  color: #333;
+}
+.job-card1{
+  margin-top: 50px;
+}
+.job-card {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 20px;
+  background-color: #f4b7b7;
+  border-radius: 10px;
+  /* margin-bottom: 20px; */
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 20px;
+}
+
+.job-card3 {
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: #f4b7b7;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 20px;
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+.job-duration {
+  float: right;
+  font-size: 14px;
+  /* color: #e5e5e5; */
+  font-weight: bold;
+  font-family: fantasy;
+  color: black;
+}
+
+.details {
+  font-family: fantasy;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.tech-stack {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.tech-stack span {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 12px;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.work-color{
+  background-color: #f4f4f4;
+}
+
+.work-style {
+    padding-top: 70px;
+    font-family: 'Futura';
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Add this CSS for styling */
+.project-showcase-container1 {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.project-showcase-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  margin-top: 50px; /* Adjust the space above */
+  margin-bottom: 50px; 
+}
+
+.image-section {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.text-section {
+  flex: 1;
+}
+
+.text-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6c63ff;
   color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background-color: #584fdf;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  width: 60%;
+  font-family: monospace;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.intro p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.intro a {
+  color: #0073b1; /* LinkedIn blue color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skills {
+  width: 35%;
+  font-family: monospace;
+}
+
+.skills h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.skills-grid span {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  /* font-size: 1rem; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skills-grid span:hover {
+  background-color: #0073b1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.font-style{
+    font-family: sans-serif;
 }

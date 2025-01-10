@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./Navbar";
 import JobList from './JobList'; 
 
@@ -15,7 +15,6 @@ const App = () => {
         <section class="section animation centered-text">
         <h1>Hi. I am Pallavi!</h1>
         <p>I build dynamic, scalable solutions that merge cutting-edge technology with seamless user experiences. </p>        
-            {/* <p>This is the main content of the page.</p> */}
         </section>
         </div>
         <div id="about" className="grid-container-intro">
@@ -64,7 +63,7 @@ const App = () => {
           </div>
       <div className="project-showcase-container1">
         <div className="image-section">
-          <img src="/images/machine-learning-project.png" alt="Project image" />
+          <img src="/images/machine-learning-project.png" alt="Project image1" />
         </div>
 
         <div className="text-section">
@@ -75,7 +74,7 @@ const App = () => {
       </div>
       <div className="project-showcase-container">
         <div className="image-section">
-          <img src="/images/seattle-tour-guide-project.png" alt="Project image" />
+          <img src="/images/seattle-tour-guide-project.png" alt="Project image2" />
         </div>
 
         <div className="text-section">
@@ -86,7 +85,7 @@ const App = () => {
       </div>
       <div className="project-showcase-container">
         <div className="image-section">
-          <img src="/images/student-management-system-project.png" alt="Project image" />
+          <img src="/images/student-management-system-project.png" alt="Project image3" />
         </div>
 
         <div className="text-section">

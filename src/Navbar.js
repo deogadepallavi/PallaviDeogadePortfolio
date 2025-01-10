@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { IoClose, IoMenu } from "react-icons/io5";
+import React from "react";
 
 const Navbar = () => {
     return (
@@ -34,21 +32,12 @@ const Navbar = () => {
               </a>
               </li>
               <li className="nav__item">
-                {/* <NavLink
-                  to="/favorite"
-                  className="nav__link"
-                >
-                  LinkedIn
-                </NavLink> */}
                 <a href="https://www.linkedin.com/in/pallavideogade/" target="_blank" rel="noopener noreferrer" className="nav__link">
                  LinkedIn
               </a>
               </li>
-            
             </ul>
           </div>
-   
-          
         </nav>
       </header>
     );

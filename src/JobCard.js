@@ -15,7 +15,6 @@ const JobCard = ({ job = {} }) => {
       {isOpen && (
         <div className="details">
           <p className="location">📍 {job.location || 'No Location Provided'}</p>
-          {/* <p className="website">🌐 {job.website || 'No Website Provided'}</p> */}
           <p>{job.description || 'No Description Available'}</p>
           <div className="tech-stack">
             {job.techStack.length > 0 ? (

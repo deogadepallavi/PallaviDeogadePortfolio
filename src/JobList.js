@@ -1,6 +1,6 @@
 import React from 'react';
 import JobCard from './JobCard';
-import { jobs } from './jobsData'; // Import the jobs array
+import { jobs } from './jobsData'; 
 
 const JobList = () => {
   return (

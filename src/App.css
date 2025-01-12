@@ -1,3 +1,5 @@
+
+
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -22,23 +24,8 @@
   float: right;
  }
   
- .nav__toggle,
- .nav__close {
-  font-size: 1.5rem;
-  color: var(--title-color);
-  cursor: pointer;
- }
- 
- .nav__cta {
-  background-color: var(--first-color);
-  color: var(--title-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding: 0.75rem 1.5rem;
- }
- .nav__list {
+  
+  .nav__list {
   display: flex;
   flex-direction: row;
   row-gap: 2.5rem;
@@ -60,12 +47,103 @@
  .nav__link:hover {
   color: var(--first-color);
  }
- 
- .nav__close {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
- }
+
+ @media screen and (max-width: 850px) {  
+    .nav {
+      display: flex;
+      flex-direction: column; /* Adjust the layout for smaller screens */
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: auto; /* Adjust height to wrap content */
+      margin: 0; /* Remove margins for a more compact layout */
+      padding: 1rem; /* Add padding for spacing */
+    }
+
+    .nav__link{
+      font-size: 12px;
+    }
+    
+    .container {
+      float: none; /* Remove float for smaller screens */
+      width: 100%; /* Ensure full width for the container */
+      display: flex;
+      justify-content: center;
+      padding-left: 0px;
+    padding-right: 0px;
+    }
+  
+    .nav__list {
+      display: flex;
+      flex-direction: row; /* Change to column for a vertical menu */
+      row-gap: 1rem; /* Adjust gap between items */
+      align-items: center; /* Center items for better alignment */
+      font-size: 10px;
+      padding-left: 0px;
+    }
+
+    .grid-container-intro {
+      flex-direction: column;
+      padding-left: 10px;
+      padding-right: 10px;
+      /* align-items: center; Optional: centers items horizontally when stacked */
+    }
+
+    .project-showcase-container {
+      flex-direction: column;
+    }
+
+    .project-showcase-container1 {
+      flex-direction: column;
+    }
+
+    .centered-text h1 {
+      font-size: 70px;
+    }
+
+    .intro {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    }
+
+    .job-card {
+    margin-left: 0px;
+    margin-right: 0px;
+    left: 10px;
+    right: 10px;
+    }
+
+    .job-card1 {
+    margin-left: 0px;
+    margin-right: 0px;
+    left: 10px;
+    right: 10px;
+    }
+
+    .job-card3 {
+    margin-left: 0px;
+    margin-right: 0px;
+    left: 10px;
+    right: 10px;
+    }
+
+    .skills h2 {
+      /* font-size: 1.8rem; */
+      margin-bottom: 20px;
+      margin-top: 20px;
+  }
+
+  .skills-grid {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  }
+  
  
  .show-menu {
   right: 0;
@@ -130,19 +208,9 @@
 }
 
 .grid-container-intro{
-  /* display: grid; */
-  /* grid-template-rows: 1fr 1fr 1fr 1fr; Four equal rows */
-  /* height: 100vh; Full viewport height */
-   /* width: 100vw;  */
   display: flex;
   justify-content: center;
   background-color: rgb(250, 248, 244);
-     /* justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 50px; */
-  /* max-width: 1200px; */
-  /* margin: 0 auto; */
     gap: 10px;
     padding-bottom: 50px;
     padding-top: 100px;
@@ -409,7 +477,7 @@
   font-family: fantasy;
   background-color: antiquewhite;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 15px;
 }
 
@@ -432,7 +500,6 @@
   right: 10px;
   top: 10px;
   font-size: 18px;
-  color: #fff;
   cursor: pointer;
 }
 
@@ -445,6 +512,8 @@
     font-family: 'Futura';
     text-align: center;
     font-weight: 400;
+    margin-top: 0px;
+
 }
 
 /* Add this CSS for styling */
@@ -578,3 +647,5 @@
 .font-style{
     font-family: sans-serif;
 }
+
+

@@ -7,7 +7,7 @@ import JobList from './JobList';
 const App = () => {
  return (
    <Router>  
-     <main>
+     <main className="home">
      <Navbar />
        
 

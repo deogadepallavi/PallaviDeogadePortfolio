@@ -15,7 +15,7 @@ const JobCard = ({ job = {} }) => {
       {isOpen && (
         <div className="details">
           <p className="location">📍 {job.location || 'No Location Provided'}</p>
-          <p>{job.description || 'No Description Available'}</p>
+          <p className="text">{job.description || 'No Description Available'}</p>
           <div className="tech-stack">
             {job.techStack.length > 0 ? (
               job.techStack.map((tech, index) => <span key={index}>{tech}</span>)

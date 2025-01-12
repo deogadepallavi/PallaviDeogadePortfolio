@@ -14,7 +14,7 @@ const App = () => {
        <div className="grid-container"> 
         <section class="section animation centered-text">
         <h1>Hi. I am Pallavi!</h1>
-        <p>I build dynamic, scalable solutions that merge cutting-edge technology with seamless user experiences. </p>        
+        <p className="text-size">I build dynamic, scalable solutions that merge cutting-edge technology with seamless user experiences. </p>        
         </section>
         </div>
         <div id="about" className="grid-container-intro">

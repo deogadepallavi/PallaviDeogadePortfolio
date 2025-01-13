@@ -28,7 +28,7 @@ const Navbar = () => {
             </li>
             <li className="nav__item">
                <a href="https://github.com/deogadepallavi" target="_blank" rel="noopener noreferrer" className="nav__link">
-               Github
+               GitHub
             </a>
             </li>
             <li className="nav__item">

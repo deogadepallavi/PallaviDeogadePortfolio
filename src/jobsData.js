@@ -1,5 +1,13 @@
 // jobsData.js
 export const jobs = [
+  {
+    title: 'Software Development Engineer',
+    duration: 'Jan 2025 - Present',
+    location: 'Seattle, USA',
+    website: '',
+    description: 'Developed a responsive User Profile screen and integrated AWS services to power user-agent conversations and generate actionable insights. Effectively utilized AWS services (Lambda, API Gateway, DynamoDB, and EC2) to power user-agent conversations and generate insights ',
+    techStack: ['React Native', 'AWS Lambda', 'API Gateway', 'DynamoDB', 'EC2']
+  },
     {
       title: 'Teaching Assistant of Program Structure and Algorithms @ Northeastern University',
       duration: 'Feb 2024 - May 2024',
